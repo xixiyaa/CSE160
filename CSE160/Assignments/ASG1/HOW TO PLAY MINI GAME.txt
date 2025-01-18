@@ -1,0 +1,17 @@
+Starting the Game
+
+Click the “Start Mini Game (Part 13)” button. Once the game starts, you’ll see random shapes (squares, triangles, or circles) begin to appear on the canvas.
+Objective
+
+Click (or “whack”) each shape before it disappears to score +1 point.
+How It Works
+
+Spawning: A new shape appears on the canvas every 0.6 seconds. Each shape has a random size, color, and location.
+Lifespan: Each shape vanishes automatically about one second after it appears—so there’s only a short window to click it.
+Scoring: Every time you successfully click on a shape (i.e., inside its bounding area), the shape is removed and your score increments by one. The current score is shown next to “Game Score:” at the bottom of the controls panel.
+Game Over: After 30 seconds, the game stops spawning shapes and pops up an alert with your final score.
+Tips for Graders
+
+When “Start Mini Game” is active, the normal painting functionality is disabled. Clicking on the canvas no longer draws new shapes; instead, it attempts to detect (and remove) the spawned shapes.
+Your score is displayed in real‐time under “Game Score:”. After the 30‐second timer expires, an alert will appear saying “Game Over!” plus your final score.
+You can play multiple rounds by clicking “Start Mini Game” again.

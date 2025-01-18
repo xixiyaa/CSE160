@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 1: Painting + Mini Game</title>
+  <style>
+    body {
+      margin: 1em;
+      font-family: sans-serif;
+      background: #f0f0f0;
+    }
+    canvas {
+      border: 1px solid black;
+      background: black;
+      display: block;
+      margin-bottom: 1em;
+    }
+    #controls {
+      margin-bottom: 1em;
+    }
+    label {
+      margin-right: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Assignment 1: Painting</h1>
+<canvas id="webgl" width="500" height="500"></canvas>
+
+<div id="controls">
+  <button id="clearButton">Clear Canvas</button>
+  <button id="drawPictureButton">Draw a Picture (Part 12)</button>
+  <button id="startGameButton">Start Mini Game (Part 13)</button>
+
+  <p><strong>Drawing Mode:</strong></p>
+  <input type="radio" name="shapeType" id="squareRadio" value="square" checked>
+    <label for="squareRadio">Squares</label>
+  <input type="radio" name="shapeType" id="triangleRadio" value="triangle">
+    <label for="triangleRadio">Triangles</label>
+  <input type="radio" name="shapeType" id="circleRadio" value="circle">
+    <label for="circleRadio">Circles</label>
+
+  <p><strong>Shape Color:</strong></p>
+  <label>Red
+    <input id="redSlider" type="range" min="0" max="1" step="0.01" value="0.0">
+  </label>
+  <label>Green
+    <input id="greenSlider" type="range" min="0" max="1" step="0.01" value="0.5">
+  </label>
+  <label>Blue
+    <input id="blueSlider" type="range" min="0" max="1" step="0.01" value="1.0">
+  </label>
+
+  <p><strong>Shape Size:</strong>
+    <input id="sizeSlider" type="range" min="0.01" max="0.25" step="0.01" value="0.1">
+  </p>
+
+  <p><strong>(Circles) Segment Count:</strong>
+    <input id="segmentsSlider" type="range" min="3" max="60" step="1" value="20">
+  </p>
+
+  <p><strong>Game Score:</strong> <span id="scoreDisplay">0</span></p>
+</div>
+
+<!-- Reference example scripts (not strictly needed at runtime if you don't call them) -->
+<script src="HelloPoint1.js"></script>
+<script src="ColoredPoints.js"></script>
+
+<!-- Our utility for initShaders (similar to cuon-utils) -->
+<script src="initShaders.js"></script>
+
+<!-- Part 1–11 painting logic -->
+<script src="paint.js"></script>
+
+<!-- Part 12: Draw a "picture" -->
+<script src="drawPicture12.js"></script>
+
+<!-- Part 13: Mini Game -->
+<script src="part13Game.js"></script>
+
+</body>
+</html>
